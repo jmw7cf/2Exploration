@@ -63,28 +63,27 @@
         
         .carousel-control.left,.carousel-control.right 
         {margin-left:15px;background-image:none;}
-@media (max-width: 767px) {
-	.carousel-inner .active.left { left: -100%; }
-	.carousel-inner .next        { left:  100%; }
-	.carousel-inner .prev		 { left: -100%; }
-	.active > div { display:none; }
-	.active > div:first-child { display:block; }
+        @media (max-width: 767px) {
+	       .carousel-inner .active.left { left: -100%; }
+	       .carousel-inner .next        { left:  100%; }
+	       .carousel-inner .prev		 { left: -100%; }
+	       .active > div { display:none; }
+	       .active > div:first-child { display:block; }
 
 }
-@media (min-width: 767px) and (max-width: 992px ) {
-	.carousel-inner .active.left { left: -50%; }
-	.carousel-inner .next        { left:  50%; }
-	.carousel-inner .prev		 { left: -50%; }
-	.active > div { display:none; }
-	.active > div:first-child { display:block; }
-	.active > div:first-child + div { display:block; }
-}
-@media (min-width: 992px ) {
-	.carousel-inner .active.left { left: -25%; }
-	.carousel-inner .next        { left:  25%; }
-	.carousel-inner .prev		 { left: -25%; }	
-}
-
+        @media (min-width: 767px) and (max-width: 992px ) {
+	       .carousel-inner .active.left { left: -50%; }
+	       .carousel-inner .next        { left:  50%; }
+	       .carousel-inner .prev		 { left: -50%; }
+	       .active > div { display:none; }
+	       .active > div:first-child { display:block; }
+	       .active > div:first-child + div { display:block; }
+        }
+        @media (min-width: 992px ) {
+            .carousel-inner .active.left { left: -25%; }
+            .carousel-inner .next        { left:  25%; }
+	       .carousel-inner .prev		 { left: -25%; }	
+        }
     </style>
 </head>
 
@@ -99,7 +98,7 @@
         </div>
     </div>
     <div class="col-md-6 col-md-offset-3">
-    <div id="carousel" class="carousel slide" data-ride="carousel" data-type="multi">
+    <div id="carousel" class="carousel slide" data-ride="carousel" data-type="multi" data-interval="false">
         <div class="carousel-inner">
                 <div class ="item active nav nav-pills">
                     <div class="carousel-col"><a href="#johnmayer"><img src="images/johnMayer.jpg" class="img-circle" alt="">John Mayer</a>
@@ -121,8 +120,8 @@
                     <div class="carousel-col"><a href="#nationalparkservice"><img src="images/nationalParkService.png" class="img-circle" alt="">National Parks Service</a>
                     </div>
                 </div>
-            <a class="left carousel-control" href="#" data-slide="prev"><i class="glyphicon glyphicon-chevron-left"></i></a>
-            <a class="right carousel-control" href="#" data-slide="next"><i class="glyphicon glyphicon-chevron-right"></i></a>
+            <a class="left carousel-control" data-target="#carousel" data-slide="prev"><i class="glyphicon glyphicon-chevron-left"></i></a>
+            <a class="right carousel-control" data-target="#carousel" data-slide="next"><i class="glyphicon glyphicon-chevron-right"></i></a>
 <!--        <li><img id="loading" src="img/ajax_load.gif" alt="loading" /></li>-->
         </div>
     </div>

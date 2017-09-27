@@ -20,7 +20,7 @@ $(document).ready(function () {
    
     checkURL(); //this will check if the URL has a reference to a page. It will load it.
     
-    $('ul li a').click(function(e){ //go through all of our navigation links
+    $('a').click(function(e){ //go through all of our navigation links
         checkURL(this.hash); // assigns them to an onclick event using their own hash
     });
     
@@ -34,7 +34,6 @@ $(document).ready(function () {
 
 $('.carousel[data-type="multi"] .item').each(function(){
   var next = $(this).next();
-    console.log(next);
   if (!next.length) {
     next = $(this).siblings(':first');
   }
