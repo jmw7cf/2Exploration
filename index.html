@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Exploration 1</title>
+<title>Exploration 2</title>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -43,6 +43,31 @@
             width: 200px;
             float: left;
         }
+        
+        .carousel-control 			 { width:  4%; }
+.carousel-control.left,.carousel-control.right {margin-left:15px;background-image:none;}
+@media (max-width: 767px) {
+	.carousel-inner .active.left { left: -100%; }
+	.carousel-inner .next        { left:  100%; }
+	.carousel-inner .prev		 { left: -100%; }
+	.active > div { display:none; }
+	.active > div:first-child { display:block; }
+
+}
+@media (min-width: 767px) and (max-width: 992px ) {
+	.carousel-inner .active.left { left: -50%; }
+	.carousel-inner .next        { left:  50%; }
+	.carousel-inner .prev		 { left: -50%; }
+	.active > div { display:none; }
+	.active > div:first-child { display:block; }
+	.active > div:first-child + div { display:block; }
+}
+@media (min-width: 992px ) {
+	.carousel-inner .active.left { left: -25%; }
+	.carousel-inner .next        { left:  25%; }
+	.carousel-inner .prev		 { left: -25%; }	
+}
+
     </style>
 </head>
 
@@ -56,14 +81,30 @@
             <h3>Check out some of my favorite Twitter accounts!</h3>
         </div>
     </div>
+    <div class="carousel slide" data-ride="carousel" data-type="multi" id="myCarousel">
+        <div class="carousel-inner">
      <ul class="nav nav-pills">
+         <div class ="item active">
         <li><a href="#johnmayer"><img src="images/johnMayer.jpg" class="img-circle" alt="">John Mayer</a></li>
+             </div>
+         <div class ="item">
         <li><a href="#taylorswift"><img src="images/taylorSwift.jpg" class="img-circle" alt="">Taylor Swift</a></li>
+         </div>
+         <div class ="item">
         <li><a href="#ryanreynolds"><img src="images/ryanReynolds.jpg" class="img-circle" alt="">Ryan Reynolds</a></li>
+         </div>
+         <div class ="item">
         <li><a href="#jimmyfallon"><img src="images/jimmyFallon.jpg" class="img-circle" alt="">Jimmy Fallon</a></li>
+         </div>
+         <div class ="item">
         <li><a href="#nationalparkservice"><img src="images/nationalParkService.png" class="img-circle" alt="">National Parks Service</a></li>
-        <li><img id="loading" src="img/ajax_load.gif" alt="loading" /></li>
+         </div>
+         <a class="left carousel-control" href="#myCarousel" data-slide="prev"><i class="glyphicon glyphicon-chevron-left"></i></a>
+  <a class="right carousel-control" href="#myCarousel" data-slide="next"><i class="glyphicon glyphicon-chevron-right"></i></a>
+<!--        <li><img id="loading" src="img/ajax_load.gif" alt="loading" /></li>-->
     </ul>
+            </div>
+    </div>
     <div class="clear"></div>
     
     <div id="pageContent"><h1>Click a button to see tweets!</h1></div>
