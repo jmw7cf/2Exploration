@@ -44,9 +44,25 @@
             width: 200px;
             float: left;
         }
+        .carousel-col { 
+            position: relative; 
+            min-height: 1px; 
+            padding: 5px; 
+            float: left;
+        }
         
-        .carousel-control 			 { width:  4%; }
-.carousel-control.left,.carousel-control.right {margin-left:15px;background-image:none;}
+        .active > div { 
+            display:none;
+        }
+        .active > div:first-child { 
+            display: block; 
+        }
+        .carousel-control { 
+            width:  4%; 
+        }
+        
+        .carousel-control.left,.carousel-control.right 
+        {margin-left:15px;background-image:none;}
 @media (max-width: 767px) {
 	.carousel-inner .active.left { left: -100%; }
 	.carousel-inner .next        { left:  100%; }
@@ -83,33 +99,31 @@
         </div>
     </div>
     <div class="col-md-6 col-md-offset-3">
-    <div class="carousel slide" data-ride="carousel" data-type="multi" id="myCarousel">
+    <div id="carousel" class="carousel slide" data-ride="carousel" data-type="multi">
         <div class="carousel-inner">
-            <ul class="nav nav-pills">
-                <div class ="item active">
-                    <li class="col-md-3 col-sm-6 col-xs-12"><a href="#johnmayer"><img src="images/johnMayer.jpg" class="img-circle" alt="">John Mayer</a>
-                    </li>
+                <div class ="item active nav nav-pills">
+                    <div class="carousel-col"><a href="#johnmayer"><img src="images/johnMayer.jpg" class="img-circle" alt="">John Mayer</a>
+                    </div>
                 </div>
                 <div class ="item">
-                    <li class="col-md-3 col-sm-6 col-xs-12"><a href="#taylorswift"><img src="images/taylorSwift.jpg" class="img-circle" alt="">Taylor Swift</a>
-                    </li>
+                    <div class="carousel-col"><a href="#taylorswift"><img src="images/taylorSwift.jpg" class="img-circle" alt="">Taylor Swift</a>
+                    </div>
                 </div>
                 <div class ="item">
-                    <li class="col-md-3 col-sm-6 col-xs-12"><a href="#ryanreynolds"><img src="images/ryanReynolds.jpg" class="img-circle" alt="">Ryan Reynolds</a>
-                    </li>
+                    <div class="carousel-col"><a href="#ryanreynolds"><img src="images/ryanReynolds.jpg" class="img-circle" alt="">Ryan Reynolds</a>
+                    </div>
                 </div>
                 <div class ="item">
-                    <li class="col-md-3 col-sm-6 col-xs-12"><a href="#jimmyfallon"><img src="images/jimmyFallon.jpg" class="img-circle" alt="">Jimmy Fallon</a>
-                    </li>
+                    <div class="carousel-col"><a href="#jimmyfallon"><img src="images/jimmyFallon.jpg" class="img-circle" alt="">Jimmy Fallon</a>
+                    </div>
                 </div>
                 <div class ="item">
-                    <li class="col-md-3 col-sm-6 col-xs-12"><a href="#nationalparkservice"><img src="images/nationalParkService.png" class="img-circle" alt="">National Parks Service</a>
-                    </li>
+                    <div class="carousel-col"><a href="#nationalparkservice"><img src="images/nationalParkService.png" class="img-circle" alt="">National Parks Service</a>
+                    </div>
                 </div>
-            <a class="left carousel-control" href="#myCarousel" data-slide="prev"><i class="glyphicon glyphicon-chevron-left"></i></a>
-            <a class="right carousel-control" href="#myCarousel" data-slide="next"><i class="glyphicon glyphicon-chevron-right"></i></a>
+            <a class="left carousel-control" href="#" data-slide="prev"><i class="glyphicon glyphicon-chevron-left"></i></a>
+            <a class="right carousel-control" href="#" data-slide="next"><i class="glyphicon glyphicon-chevron-right"></i></a>
 <!--        <li><img id="loading" src="img/ajax_load.gif" alt="loading" /></li>-->
-            </ul>
         </div>
     </div>
     </div>
