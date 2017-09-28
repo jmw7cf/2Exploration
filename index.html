@@ -10,9 +10,6 @@
     <script type="text/javascript" src="script.js"></script>
 
     <style>
-        #loading{
-            visibility:hidden;
-        }
         
         ul {
             list-style-type: none;
@@ -44,85 +41,105 @@
             width: 200px;
             float: left;
         }
-        .carousel-col { 
-            position: relative; 
-            min-height: 1px; 
-            padding: 5px; 
-            float: left;
+        .item {
+            display: inline-block;
+            left: 33%;
         }
         
-        .active > div { 
-            display:none;
+        .carousel-container {
+            overflow: hidden;
+            white-space: nowrap;
+            display: inline-block;
         }
-        .active > div:first-child { 
-            display: block; 
+        .carousel-inner {
+            overflow: hidden;
+            white-space: nowrap;
         }
-        .carousel-control { 
-            width:  4%; 
-        }
-        
-        .carousel-control.left,.carousel-control.right 
-        {margin-left:15px;background-image:none;}
-        @media (max-width: 767px) {
-	       .carousel-inner .active.left { left: -100%; }
-	       .carousel-inner .next        { left:  100%; }
-	       .carousel-inner .prev		 { left: -100%; }
-	       .active > div { display:none; }
-	       .active > div:first-child { display:block; }
 
-}
-        @media (min-width: 767px) and (max-width: 992px ) {
-	       .carousel-inner .active.left { left: -50%; }
-	       .carousel-inner .next        { left:  50%; }
-	       .carousel-inner .prev		 { left: -50%; }
-	       .active > div { display:none; }
-	       .active > div:first-child { display:block; }
-	       .active > div:first-child + div { display:block; }
-        }
-        @media (min-width: 992px ) {
-            .carousel-inner .active.left { left: -25%; }
-            .carousel-inner .next        { left:  25%; }
-	       .carousel-inner .prev		 { left: -25%; }	
-        }
     </style>
 </head>
 
 <body>
 
 <div class="container">
-    <div class="jumbotron row">
+    <div class="row">
+    <div class="jumbotron">
         <img src="images/twitterIcon.png" id="twitter-icon">
         <div id="header">
             <h1>Exploration 1 -- Fake Twitter</h1>
             <h3>Check out some of my favorite Twitter accounts!</h3>
         </div>
     </div>
-    <div class="col-md-6 col-md-offset-3">
-    <div id="carousel" class="carousel slide" data-ride="carousel" data-type="multi" data-interval="false">
+    <div class="col-xs-12">
+    <div id="carousel" class="carousel carousel-showmanymoveone slide" data-interval="false" data-type="multi">
         <div class="carousel-inner">
-                <div class ="item active nav nav-pills">
-                    <div class="carousel-col"><a href="#johnmayer"><img src="images/johnMayer.jpg" class="img-circle" alt="">John Mayer</a>
+                <div class ="item active">
+                    <div class="row">
+                        <div class="col-xs-4">
+                            <a href="#johnmayer"><img src="images/johnMayer.jpg" class="img-circle img-responsive" alt="">John Mayer</a>
+                        </div>
+                        <div class="col-xs-4">
+                            <a href="#taylorswift"><img src="images/taylorSwift.jpg" class="img-circle img-responsive" alt="">Taylor Swift</a>
+                        </div>
+                        <div class ="col-xs-4">
+                            <a href="#ryanreynolds"><img src="images/ryanReynolds.jpg" class="img-circle img-responsive" alt="">Ryan Reynolds</a>
+                        </div>
                     </div>
                 </div>
                 <div class ="item">
-                    <div class="carousel-col"><a href="#taylorswift"><img src="images/taylorSwift.jpg" class="img-circle" alt="">Taylor Swift</a>
+                    <div class="row">
+                    <div class="col-xs-4">
+                            <a href="#taylorswift"><img src="images/taylorSwift.jpg" class="img-circle img-responsive" alt="">Taylor Swift</a>
+                        </div>
+                    <div class ="col-xs-4">
+                            <a href="#ryanreynolds"><img src="images/ryanReynolds.jpg" class="img-circle img-responsive" alt="">Ryan Reynolds</a>
+                        </div>
+                    <div class="ccol-xs-4">
+                        <a href="#jimmyfallon"><img src="images/jimmyFallon.jpg" class="img-circle img-responsive" alt="">Jimmy Fallon</a>
+                    </div>
                     </div>
                 </div>
                 <div class ="item">
-                    <div class="carousel-col"><a href="#ryanreynolds"><img src="images/ryanReynolds.jpg" class="img-circle" alt="">Ryan Reynolds</a>
+                    <div class="row">
+                    <div class ="col-xs-4">
+                            <a href="#ryanreynolds"><img src="images/ryanReynolds.jpg" class="img-circle img-responsive" alt="">Ryan Reynolds</a>
+                        </div>
+                    <div class="col-xs-4">
+                        <a href="#jimmyfallon"><img src="images/jimmyFallon.jpg" class="img-circle img-responsive" alt="">Jimmy Fallon</a>
+                    </div>
+                    <div class="col-xs-4">
+                        <a href="#nationalparkservice"><img src="images/nationalParkService.png" class="img-circle img-responsive" alt="">National Parks Service</a>
+                    </div>
                     </div>
                 </div>
                 <div class ="item">
-                    <div class="carousel-col"><a href="#jimmyfallon"><img src="images/jimmyFallon.jpg" class="img-circle" alt="">Jimmy Fallon</a>
+                    <div class="row">
+                    <div class="col-xs-4">
+                        <a href="#jimmyfallon"><img src="images/jimmyFallon.jpg" class="img-circle img-responsive" alt="">Jimmy Fallon</a>
+                    </div>
+                    <div class="col-xs-4">
+                        <a href="#nationalparkservice"><img src="images/nationalParkService.png" class="img-circle img-responsive" alt="">National Parks Service</a>
+                    </div>
+                    <div class="col-xs-4">
+                        <a href="#johnmayer"><img src="images/johnMayer.jpg" class="img-circle img-responsive" alt="">John Mayer</a>
+                    </div>
                     </div>
                 </div>
                 <div class ="item">
-                    <div class="carousel-col"><a href="#nationalparkservice"><img src="images/nationalParkService.png" class="img-circle" alt="">National Parks Service</a>
+                    <div class="row">
+                    <div class="col-xs-4"><a href="#nationalparkservice"><img src="images/nationalParkService.png" class="img-circle img-responsive" alt="">National Parks Service</a>
+                    </div>
+                    <div class="col-xs-4">
+                            <a href="#johnmayer"><img src="images/johnMayer.jpg" class="img-circle img-responsive" alt="">John Mayer</a>
+                    </div>
+                    <div class="col-xs-4">
+                            <a href="#taylorswift"><img src="images/taylorSwift.jpg" class="img-circle img-responsive" alt="">Taylor Swift</a>
+                    </div>
                     </div>
                 </div>
+        </div>
             <a class="left carousel-control" data-target="#carousel" data-slide="prev"><i class="glyphicon glyphicon-chevron-left"></i></a>
             <a class="right carousel-control" data-target="#carousel" data-slide="next"><i class="glyphicon glyphicon-chevron-right"></i></a>
-<!--        <li><img id="loading" src="img/ajax_load.gif" alt="loading" /></li>-->
         </div>
     </div>
     </div>
@@ -132,5 +149,6 @@
     
     </div>
     <div class="clear"></div>
+    </div>
 </body>
 </html>
