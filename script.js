@@ -49,9 +49,8 @@ $(document).ready(function () {
 //	}
 //});
 
-(function() {
-            $('.carousel-showmanymoveone .item').each(function() {
-                var itemToClone = $(this);
+    $('.carousel-showmanymoveone .item').each(function() {
+            var itemToClone = $(this);
                 for (var i = 1; i < 4; i++) {
                     itemToClone = itemToClone.next();
                     // wrap around if at end of item collection
@@ -64,8 +63,6 @@ $(document).ready(function () {
                         .appendTo($(this));
                 }
             });
-        }());
-
 
 function loadPage(url) { //loads the page via AJAx
     url=url.replace('#', '');
