@@ -8,9 +8,11 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script type="text/javascript" src="script.js"></script>
-
-    <style>
-        
+    
+    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+						
+   <style>
         ul {
             list-style-type: none;
         }
@@ -87,37 +89,24 @@
         </div>
     </div>
     <div class="col-xs-12">
-        <div id="carousel" class="carousel carousel-showmanymoveone slide" data-interval="false" data-type="multi">
-            <div class="carousel-inner">
-                    <div class ="item active">
-                        <div class="col-xs-12 col-sm-4 col-md-2">
-                            <a href="#johnmayer"><img src="images/johnMayer.jpg" class="img-circle img-responsive" alt="">John Mayer</a>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="col-xs-12 col-sm-4 col-md-2">
-                            <a href="#taylorswift"><img src="images/taylorSwift.jpg" class="img-circle img-responsive" alt="">Taylor Swift</a>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class ="col-xs-12 col-sm-4 col-md-2">
-                            <a href="#ryanreynolds"><img src="images/ryanReynolds.jpg" class="img-circle img-responsive" alt="">Ryan Reynolds</a>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="col-xs-12 col-sm-4 col-md-2">
-                            <a href="#jimmyfallon"><img src="images/jimmyFallon.jpg" class="img-circle img-responsive" alt="">Jimmy Fallon</a>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="col-xs-12 col-sm-4 col-md-2">
-                            <a href="#nationalparkservice"><img src="images/nationalParkService.png" class="img-circle img-responsive" alt="">National Parks Service</a>
-                        </div>
-                    </div>
+            <div class="your-class" data-slick='{"slidesToShow": 4, "slidesToScroll": 1}'>
+                <div><a href="#johnmayer"><img src="images/johnMayer.jpg" class="img-circle img-responsive" alt="">John Mayer</a>
+                </div>
+                <div><a href="#taylorswift"><img src="images/taylorSwift.jpg" class="img-circle img-responsive" alt="">Taylor Swift</a>
+                </div>
+                <div><a href="#ryanreynolds"><img src="images/ryanReynolds.jpg" class="img-circle img-responsive" alt="">Ryan Reynolds</a>
+                </div>
+                <div><a href="#jimmyfallon"><img src="images/jimmyFallon.jpg" class="img-circle img-responsive" alt="">Jimmy Fallon</a>
+                 </div>
+                <div><a href="#nationalparkservice"><img src="images/nationalParkService.png" class="img-circle img-responsive" alt="">National Parks Service</a>
+                </div>
+            </div>
+<!--
             </div>
             <a class="left carousel-control" data-target="#carousel" data-slide="prev"><i class="glyphicon glyphicon-chevron-left"></i></a>
             <a class="right carousel-control" data-target="#carousel" data-slide="next"><i class="glyphicon glyphicon-chevron-right"></i></a>
-        </div>
+-->
+
     </div>
     <div class="clear"></div>
     
@@ -126,5 +115,16 @@
     </div>
     <div class="clear"></div>
     </div>
+    
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="slick/slick.min.js"></script>
+    <script>
+        $(document).ready(function(){
+  $('.your-class').slick({
+    
+  });
+});
+    </script>
 </body>
 </html>

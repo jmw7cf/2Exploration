@@ -30,39 +30,39 @@ $(document).ready(function () {
     setInterval(checkUrl, 250); //checks for a change in the URL every ms. This is to see if history buttons (back) have been used.
 });
 
-
-//
-//$('.carousel .item').each(function() {
-//	var next = $(this).next();
-//	if (!next.length) {
-//		next = $(this).siblings(':first');
-//	}
-//	next.children(':first-child').clone().appendTo($(this));
-//
-//	for (var i = 0; i < 2; i++) {
-//		next = next.next();
-//		if (!next.length) {
-//			next = $(this).siblings(':first');
-//		}
-//
-//		next.children(':first-child').clone().appendTo($(this));
-//	}
+//$('.carousel .item .active').each(function(){
+//    
+////  var next = $(this).next();
+////  if (!next.length) {
+////    next = $(this).siblings(':first');
+////  }
+////  next.children(':first-child').clone().appendTo($(this));
+//  next=this;
+//  for (var i=0;i<3;i++) {
+//    next.appendChild(this.next());
+//    next=next.next();
+//    if (!next.length) {
+//    	next = $(this).siblings(':first');
+//  	}
+//    
+//    next.children(':first-child').clone().appendTo($(this));
+//  }
 //});
-
-    $('.carousel-showmanymoveone .item').each(function() {
-            var itemToClone = $(this);
-                for (var i = 1; i < 4; i++) {
-                    itemToClone = itemToClone.next();
-                    // wrap around if at end of item collection
-                    if (!itemToClone.length) {
-                        itemToClone = $(this).siblings(':first');
-                    }
-                    // grab item, clone, add marker class, add to collection
-                    itemToClone.children(':first-child').clone()
-                        .addClass("cloneditem-" + (i))
-                        .appendTo($(this));
-                }
-            });
+//
+//    $('.carousel-showmanymoveone .item').each(function() {
+//            var itemToClone = $(this);
+//                for (var i = 1; i < 4; i++) {
+//                    itemToClone = itemToClone.next();
+//                    // wrap around if at end of item collection
+//                    if (!itemToClone.length) {
+//                        itemToClone = $(this).siblings(':first');
+//                    }
+//                    // grab item, clone, add marker class, add to collection
+//                    itemToClone.children(':first-child').clone()
+//                        .addClass("cloneditem-" + (i))
+//                        .appendTo($(this));
+//                }
+//            });
 
 function loadPage(url) { //loads the page via AJAx
     url=url.replace('#', '');
