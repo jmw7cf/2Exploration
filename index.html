@@ -35,7 +35,7 @@
         .img-circle {
             width: 50px;
             height: 50px;
-            margin-right: 10px;
+            margin: auto;
         }
         
         #twitter-icon {
@@ -48,12 +48,16 @@
         }
         
        .custom-carousel {
-            padding: 10px 75px 10px 75px;
+            padding: 20px 75px 10px 75px;
        }
        
        .slick-next:before, .slick-prev:before {
-           color: darkblue;
+           color: #00aced;
            background-color: white;
+           text-align: center;
+       }
+       .slick-slide {
+           text-align: center;
        }
     </style>
 </head>
@@ -70,24 +74,24 @@
         </div>
     </div>
     <div class="col-xs-12 custom-carousel">
-            <div class="slider" data-slick='{"slidesToShow": 4, "slidesToScroll": 1}'>
-                <div><a href="#johnmayer"><img src="images/johnMayer.jpg" class="img-circle img-responsive" alt="">John Mayer</a>
+            <div class="slider" data-slick='{"slidesToShow": 5, "slidesToScroll": 1}'>
+                <div><a href="#johnmayer"><img src="images/johnMayer.jpg" class="img-circle img-responsive" alt="John Mayer">John Mayer</a>
                 </div>
-                <div><a href="#taylorswift"><img src="images/taylorSwift.jpg" class="img-circle img-responsive" alt="">Taylor Swift</a>
+                <div><a href="#taylorswift"><img src="images/taylorSwift.jpg" class="img-circle img-responsive" alt="Taylor Swift">Taylor Swift</a>
                 </div>
-                <div><a href="#ryanreynolds"><img src="images/ryanReynolds.jpg" class="img-circle img-responsive" alt="">Ryan Reynolds</a>
+                <div><a href="#ryanreynolds"><img src="images/ryanReynolds.jpg" class="img-circle img-responsive" alt="Ryan Reynolds">Ryan Reynolds</a>
                 </div>
-                <div><a href="#jimmyfallon"><img src="images/jimmyFallon.jpg" class="img-circle img-responsive" alt="">Jimmy Fallon</a>
+                <div><a href="#jimmyfallon"><img src="images/jimmyFallon.jpg" class="img-circle img-responsive" alt="Jimmy Fallon">Jimmy Fallon</a>
                  </div>
-                <div><a href="#nationalparkservice"><img src="images/nationalParkService.png" class="img-circle img-responsive" alt="">National Parks Service</a>
+                <div><a href="#nationalparkservice"><img src="images/nationalParkService.png" class="img-circle img-responsive" alt="National Parks Service">National Parks Service</a>
+                </div>
+                <div><a href="#veritasmizzou"><img src="images/veritasMizzou.jpg" class="img-circle img-responsive" alt="Veritas">Veritas</a>
+                </div>
+                <div><a href="#mizzouTheta"><img src="images/mizzouTheta.jpg" class="img-circle img-responsive" alt="Mizzou Theta">Mizzou Theta</a>
+                </div>
+                <div><a href="#google"><img src="images/google.jpg" class="img-circle img-responsive" alt="Google">Google</a>
                 </div>
             </div>
-<!--
-            </div>
-            <a class="left carousel-control" data-target="#carousel" data-slide="prev"><i class="glyphicon glyphicon-chevron-left"></i></a>
-            <a class="right carousel-control" data-target="#carousel" data-slide="next"><i class="glyphicon glyphicon-chevron-right"></i></a>
--->
-
     </div>
     <div class="clear"></div>
     
@@ -102,11 +106,10 @@
 <script type="text/javascript" src="slick/slick.min.js"></script>
     <script>
         $(document).ready(function(){
-  $('.slider').slick({
-//      prevArrow: $(".slick-next"),
-//      nextArrow: $(".slick-prev");
-  });
-});
+            $('.slider').slick({
+
+            });
+        });
     </script>
 </body>
 </html>
